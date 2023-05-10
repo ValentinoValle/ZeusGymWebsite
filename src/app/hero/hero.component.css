@@ -1,0 +1,26 @@
+.hero {
+  background: url("../../assets/pexels-leon-ardho-1552252.jpg");
+  background-size: cover;
+  padding: 1em;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.hero-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.hero-info {
+  display: flex;
+  width: 80%;
+  margin: auto auto;
+  padding: 2em;
+}
+
+.logo {
+  height: 15em;
+}/*# sourceMappingURL=hero.component.css.map */
