@@ -5,24 +5,37 @@
     background-size: cover;
     padding: 1em;
     color: #fff;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .hero-wrapper {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    width: 80%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: var(--page-width);
+    margin-inline: auto;
     height: 100%;
 }
 
 .hero-info {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     width: 80%;
     margin: auto auto;
-    padding: 2em;
+    text-align: center;
 }
 
 .logo {
+    align-self: center;
     height: 15em;
+    
 }
+
+@media (max-width: 1300px) {
+    .hero-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

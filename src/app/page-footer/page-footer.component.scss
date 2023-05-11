@@ -1,8 +1,48 @@
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--page-width);
+    margin-inline: auto;
+    padding: 2em;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+
+    & > .footer-nav-list {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media-icons {
+    display: flex;
+}
+
+.languages-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .icon {
     height: 40px;
 }
 
 .logo {
-    max-width: 100%;
+    align-self: center;
     height: 80px;
+}
+
+@media (max-width: 900px) {
+    .footer-wrapper {
+        flex-wrap: wrap;
+    }
 }

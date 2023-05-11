@@ -1,17 +1,100 @@
 
+/* General navbar layout */
+
 .nav-wrapper {
+    position: fixed;
+    inset: 3% 0 85% 5%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
-    padding: 1em 0;
+    align-items: center;
 }
+
+/* Navbar styles */
 
 .nav-list {
     display: flex;
+    overflow: hidden;
     list-style: none;
+    font-size: var(--fs-nav);
+    padding: 1.25em 2em 1.25em 0;
+    background-color: hsl(0, 75%, 50%);
+    border: 1px solid hsl(0 0% 100%);
+    border-right: none;
+    border-radius: 1em 0 0 1em;
+
+    /* Line in the middle */
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 50% 0;
+        z-index: -1;
+        height: 2px;
+        width: 100%;
+        background-color: hsl(0 0% 100%);
+
+    }
 }
 
+/* Navigation links styles and animations */
+
 .nav-link {
-    color: #fff;
+    position: relative;
     text-decoration: none;
-    padding: 1em;
+    padding: 1.4em 1em;
+    color: hsl(0 0% 100%);
+
+    &.first-link {
+        padding-left: 2em;
+        border-radius: 1em 0 0 1em;
+    }
+
+    & > span {
+        position: relative;
+        z-index: 30;
+        transition: all .2s;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: hsl(0 0% 100%);
+        z-index: 20;
+        height: 100%;
+        width: 100%;
+        transform: translateY(100%);
+        transition: all .2s;
+    }
+
+    &:hover {
+        color: hsl(0, 75%, 50%);
+
+        & > span {
+            transition: all .2s;
+        }
+
+        &::before {
+            transform: translateY(0);
+            transition: all .2s;
+        }
+    }
+    
+}
+
+/* Logo styles and animation */
+
+.logo {
+    padding: .25em;
+    background-color: hsl(0, 75%, 50%);
+    border: 1px solid hsl(0 0% 100%);
+    border-radius: 50%;
+    transition: all .2s;
+
+    &:hover {
+        background-color: hsl(0 0% 100%);
+        border: 1px solid hsl(0, 75%, 50%);
+        transition: all .2s;
+    }
 }

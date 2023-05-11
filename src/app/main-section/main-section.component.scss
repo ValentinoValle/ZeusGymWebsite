@@ -10,11 +10,26 @@
 }
 
 .main-section {
-    display: grid;
-    width: 80%;
+    width: var(--page-width);
     margin: 0 auto;
-    grid-template-columns: 1fr 1fr;
     padding: 2em 0;
+}
+
+.get-started-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    & > * {
+        text-align: center;
+    }
+}
+
+.main-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .section-image {
