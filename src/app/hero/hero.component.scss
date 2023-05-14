@@ -4,7 +4,7 @@
     background: url("../../assets/pexels-leon-ardho-1552252.jpg");
     background-size: cover;
     padding: 1em;
-    color: #fff;
+    color: var(--primary-white);
     height: 100vh;
 }
 
@@ -24,6 +24,44 @@
     width: 80%;
     margin: auto auto;
     text-align: center;
+}
+
+.hero-text-wrapper {
+    & > * {
+        margin: 4rem;
+    }
+}
+
+.primary-header {
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    font-weight: 700;
+    filter: drop-shadow(5px 5px 0 black);
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #fff, #393939)
+}
+
+.header-leyend {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .25rem;
+    line-height: 2;
+    text-transform: uppercase;
+
+    &::before, &::after {
+        content: "";
+        display: block;
+        border-block: 1px solid var(--primary-white);
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.hero-btn {
+    margin-top: 5%;
 }
 
 .logo {

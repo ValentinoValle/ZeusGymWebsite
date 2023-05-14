@@ -35,3 +35,12 @@
 .section-image {
     width: 60%;
 }
+
+.main-section {
+    opacity: 0;
+}
+
+.appear {
+    opacity: 1;
+    transition: all .2s ease-in;
+}

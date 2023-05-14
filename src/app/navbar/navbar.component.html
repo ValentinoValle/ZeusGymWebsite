@@ -3,10 +3,9 @@
     <a href="#"><img class="logo" src="../../assets/icons/icons8-gym-100.png" alt=""></a>
     <nav class="nav">
         <ul class="nav-list">
-            <li><a class="nav-link first-link" href="#" ><span>Home</span></a></li>
-            <li><a class="nav-link" href="#" ><span>Routines</span></a></li>
-            <li><a class="nav-link" href="#" ><span>About Us</span></a></li>
-            <li><a class="nav-link" href="#" ><span>Contact</span></a></li>
+            <li *ngFor="let link of navLinks">
+                <a class="nav-link" href="#" ><span>{{ link }}</span></a>
+            </li>
         </ul>
     </nav>
 </div>

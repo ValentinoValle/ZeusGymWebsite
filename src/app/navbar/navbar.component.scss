@@ -17,11 +17,13 @@
     overflow: hidden;
     list-style: none;
     font-size: var(--fs-nav);
-    padding: 1.25em 2em 1.25em 0;
-    background-color: hsl(0, 75%, 50%);
-    border: 1px solid hsl(0 0% 100%);
+    padding: 1.25em 2em 1.25em 2em;
+    background-color: var(--primary-red);
+    border: 2px solid var(--primary-white);
     border-right: none;
     border-radius: 1em 0 0 1em;
+    box-shadow: inset 0 0 .25em black;
+
 
     /* Line in the middle */
     &::before {
@@ -32,7 +34,7 @@
         z-index: -1;
         height: 2px;
         width: 100%;
-        background-color: hsl(0 0% 100%);
+        background-color: var(--primary-white);
 
     }
 }
@@ -43,12 +45,7 @@
     position: relative;
     text-decoration: none;
     padding: 1.4em 1em;
-    color: hsl(0 0% 100%);
-
-    &.first-link {
-        padding-left: 2em;
-        border-radius: 1em 0 0 1em;
-    }
+    color: var(--primary-white);
 
     & > span {
         position: relative;
@@ -60,7 +57,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background-color: hsl(0 0% 100%);
+        background-color: var(--primary-white);
         z-index: 20;
         height: 100%;
         width: 100%;
@@ -69,7 +66,7 @@
     }
 
     &:hover {
-        color: hsl(0, 75%, 50%);
+        color: var(--primary-red);
 
         & > span {
             transition: all .2s;
@@ -77,6 +74,7 @@
 
         &::before {
             transform: translateY(0);
+            box-shadow: inset 0 0 .25em black;
             transition: all .2s;
         }
     }
@@ -87,14 +85,14 @@
 
 .logo {
     padding: .25em;
-    background-color: hsl(0, 75%, 50%);
-    border: 1px solid hsl(0 0% 100%);
+    background-color: var(--primary-red);
+    border: 2px solid var(--primary-white);
     border-radius: 50%;
     transition: all .2s;
+    box-shadow: inset 0 0 .25em black;
 
     &:hover {
-        background-color: hsl(0 0% 100%);
-        border: 1px solid hsl(0, 75%, 50%);
+        background-color: var(--primary-white);
         transition: all .2s;
     }
 }
