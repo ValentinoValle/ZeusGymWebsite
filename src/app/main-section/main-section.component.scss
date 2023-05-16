@@ -1,12 +1,14 @@
 
+/* General section styles */
+
 .main {
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
 .section-wrapper[data-secNumber="two"] {
-    background-color: #272727;
-    color: #fff;
+    background-color: var(--primary-dark);
+    color: var(--primary-white);
 }
 
 .main-section {
@@ -15,32 +17,44 @@
     padding: 2em 0;
 }
 
+.section-header {
+    font-size: 2rem;
+}
+
+/* Get started section */
+
 .get-started-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
+    color: var(--primary-dark);
 
     & > * {
         text-align: center;
     }
 }
 
+
+.section-btn {
+    transform: scale(75%);
+}
+
+/* Main info section */ 
+
 .main-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    gap: 3em;
 }
 
 .section-image {
-    width: 60%;
+    width: 30%;
+    border-radius: .75em;
+    background: radial-gradient(circle, var(--primary-white), var(--primary-red));
+    padding: .5em;
 }
 
-.main-section {
-    opacity: 0;
-}
 
-.appear {
-    opacity: 1;
-    transition: all .2s ease-in;
-}
+
