@@ -1,4 +1,11 @@
 
+/* General footer styles */
+
+.footer {
+    background-color: var(--primary-dark);
+    color: var(--primary-white);
+}
+
 .footer-wrapper {
     display: flex;
     justify-content: space-between;
@@ -8,26 +15,29 @@
     padding: 2em;
 }
 
+/* Footer nav */
+
 .footer-nav {
     display: flex;
     flex-direction: column;
+}
 
-    & > .footer-nav-list {
-        list-style: none;
-        padding: 0;
+.footer-nav-list {
+    list-style: none;
+    padding: 0;
+
+    & > * {
+        margin: .5em;
     }
 }
 
-.icon-wrapper {
-    display: flex;
-    flex-direction: column;
-}
+/* Social media icons */
 
 .social-media-icons {
     display: flex;
 }
 
-.languages-container {
+.icon-wrapper {
     display: flex;
     flex-direction: column;
 }
@@ -40,6 +50,26 @@
     align-self: center;
     height: 80px;
 }
+
+/* Languages */
+
+.languages-container {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        margin: .5em;
+    }
+}
+
+/* Contact info */
+
+.btn {
+    transform: scale(50%);
+    margin-left: 0;
+}
+
+/* Media */
 
 @media (max-width: 900px) {
     .footer-wrapper {

@@ -10,6 +10,7 @@ import { PageFooterComponent } from './page-footer/page-footer.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { TestimonialsSectionComponent } from './testimonials-section/testimonials-section.component';
 import { GetStartedBtnComponent } from './get-started-btn/get-started-btn.component';
+import { RoutineBuilderComponent } from './routine-builder/routine-builder.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GetStartedBtnComponent } from './get-started-btn/get-started-btn.compon
     PageFooterComponent,
     TestimonialComponent,
     TestimonialsSectionComponent,
-    GetStartedBtnComponent
+    GetStartedBtnComponent,
+    RoutineBuilderComponent
   ],
   imports: [
     BrowserModule,
