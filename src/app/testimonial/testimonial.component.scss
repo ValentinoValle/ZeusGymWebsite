@@ -1,12 +1,5 @@
 
-.profile-pic {
-    object-fit: cover;
-    object-position: 50% 50%;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    box-shadow: 0 0 1em var(--primary-white);
-}
+/* Testimonial card layout */
 
 .testimonial-layout {
     display: flex;
@@ -17,6 +10,8 @@
     width: 80%;
 }
 
+/* Testimonial styles and hover transition */ 
+
 .testimonial-style {
     position: relative;
     background-color: var(--primary-dark);
@@ -25,6 +20,7 @@
     border-radius: .75em;
     box-shadow: 0 0 .5em var(--primary-dark);
     overflow: hidden;
+    transition: all .2s;
 
     & > * {
         margin: .5em;
@@ -37,18 +33,56 @@
         border-radius: 30%;
         background-color: var(--primary-white);
         transform: translate(85%, -85%);
+        transition: all .2s;
+    }
+
+    /* Hover style changes */
+
+    &:hover::after {
+        transform: translate(0, 0);
+        border-radius: 0;
+        transition: all .2s;
+    }
+    &:hover > * {
+        z-index: 1000;
+        color: var(--primary-dark);
+        transition: all .2s;
+    }
+    &:hover > img {
+        box-shadow: 0 0 1em var(--primary-dark);
+    }
+    &:hover > .profession {
+        font-weight: 500;
+        transition: all .2s;
     }
 }
 
+/* Profile pic */
+
+.profile-pic {
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 1em var(--primary-white);
+}
+
+/* Name */
+ 
 .name {
     font-size: 1.75rem;
 }
+
+/* Profession */
 
 .profession {
     text-transform: uppercase;
     letter-spacing: .25em;
     font-weight: 200;
 }
+
+/* Testimonial text */
 
 .testimonial-text {
     width: 60%;

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
 import { TestimonialsSectionComponent } from './testimonials-section/testimonials-section.component';
 import { GetStartedBtnComponent } from './get-started-btn/get-started-btn.component';
 import { RoutineBuilderComponent } from './routine-builder/routine-builder.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { RoutineBuilderComponent } from './routine-builder/routine-builder.compo
     TestimonialComponent,
     TestimonialsSectionComponent,
     GetStartedBtnComponent,
-    RoutineBuilderComponent
+    RoutineBuilderComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
