@@ -14,6 +14,8 @@ import { GetStartedBtnComponent } from './get-started-btn/get-started-btn.compon
 import { RoutineBuilderComponent } from './routine-builder/routine-builder.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,15 @@ import { FormsModule } from '@angular/forms';
     TestimonialsSectionComponent,
     GetStartedBtnComponent,
     RoutineBuilderComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

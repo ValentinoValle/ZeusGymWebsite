@@ -1,12 +1,12 @@
-<div>
-    <input type="text" (input)="onSearchTextChanged($event)">
-</div>
 
-<div *ngFor="let exercise of exercises">
-    <div *ngIf="enteredSearchValue === '' ||
-    exercise.name.toLowerCase().includes(enteredSearchValue) ||
-    exercise.category.toLowerCase().includes(enteredSearchValue) ||
-    exercise.primaryMuscles[0].toLowerCase().includes(enteredSearchValue)">
-        <p>name: {{ exercise.name }}, type: {{ exercise.category }}, muscle: {{ exercise.primaryMuscles }}</p>
-    </div>
+
+<div class="searchbar">
+    <input class="searchbar-input" type="search" (focus)="onFocus()" (blur)="onBlur()" [(ngModel)]="enteredSearchValue">
+    <ul class="search-results" *ngIf="isOnFocus">
+        <div (focus)="onFocus()" (mousedown)="addHtml()" *ngFor="let exercise of exercises | searchFilter: enteredSearchValue">
+            <li class="result">
+                <span>{{ exercise.name }}<br> type: {{ exercise.category }}, muscle: {{ exercise.primaryMuscles }}</span>
+            </li>
+        </div>
+    </ul>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ExercisesService } from '../exercises.service';
 import { Exercise } from '../exercise';
 
@@ -9,19 +9,29 @@ import { Exercise } from '../exercise';
 })
 export class SearchBarComponent implements OnInit {
   enteredSearchValue: string;
-  
+
+  isSearching: boolean = false;
+  isOnFocus: boolean = false;
+
   exercises: Exercise[] = [];
   constructor(private service: ExercisesService) { }
 
   ngOnInit() {
     this.fetchData("")
   }
-  
-  onSearchTextChanged(event: any) {
-    this.enteredSearchValue = event.target.value;
-    this.fetchData(this.enteredSearchValue)
-    let bicep = 'biceps'
-    console.log(bicep.includes('bicep'));
+
+  onFocus() {
+    this.isOnFocus = true;
+    console.log(this.enteredSearchValue);
+    
+  }
+
+  onBlur() {
+    this.isOnFocus = false;
+  }
+
+  addHtml() {
+    console.log('hola');
     
   }
 
