@@ -16,6 +16,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchFilterPipe } from './search-filter.pipe';
+import { RoutineTableComponent } from './routine-table/routine-table.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,16 @@ import { SearchFilterPipe } from './search-filter.pipe';
     GetStartedBtnComponent,
     RoutineBuilderComponent,
     SearchBarComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    RoutineTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@
 <div class="searchbar">
     <input class="searchbar-input" type="search" (focus)="onFocus()" (blur)="onBlur()" [(ngModel)]="enteredSearchValue">
     <ul class="search-results" *ngIf="isOnFocus">
-        <div (focus)="onFocus()" (mousedown)="addHtml()" *ngFor="let exercise of exercises | searchFilter: enteredSearchValue">
+        <div (mousedown)="emitExerciseData(exercise)" *ngFor="let exercise of exercises | searchFilter: enteredSearchValue">
             <li class="result">
                 <span>{{ exercise.name }}<br> type: {{ exercise.category }}, muscle: {{ exercise.primaryMuscles }}</span>
             </li>

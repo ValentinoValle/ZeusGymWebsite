@@ -1,21 +1,27 @@
 
-
-
 .searchbar-input {
-    width: 31%;
+    position: relative;
+    width: 100%;
     padding: .5em;
     margin: 0 auto;
-    display: block;
 }
 
 .search-results {   
+    
     position: absolute;
     overflow-y: scroll;
     z-index: 10000;
+    /*
     left: 33%;
     right: 33%;
+    */
     margin: 0 auto;
     width: 30%;
+    
+    /*
+    position: absolute;
+    overflow-y: scroll;
+    */
     max-height: 50vh;
     list-style: none;
     background-color: var(--primary-white);

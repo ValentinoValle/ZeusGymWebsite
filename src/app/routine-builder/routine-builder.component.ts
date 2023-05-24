@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-routine-builder',
@@ -8,6 +8,5 @@ import { Component} from '@angular/core';
 export class RoutineBuilderComponent {
 
   constructor() { }
-
-  
+ 
 }

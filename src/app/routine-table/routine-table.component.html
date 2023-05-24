@@ -1,0 +1,17 @@
+<app-search-bar (clickedResult)="addNewExercise($event)"></app-search-bar>
+<table #dayTable>
+    <thead>
+        <tr>
+            <th>Day</th>
+        </tr>
+    </thead>
+   <tbody>
+       <tr *ngFor="let exercise of exercises; let i = index">
+            <span>{{ exercise.name }}</span>
+            <br>
+            <span>Type:</span> {{ exercise.category }}
+            <span>Muscle:</span> {{ exercise.primaryMuscles[0] }}
+            <button (click)="deleteExercise(i)">X</button>
+       </tr>
+   </tbody>
+</table>
