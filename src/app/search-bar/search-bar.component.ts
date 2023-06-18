@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, QueryList, ElementRef, ViewChildren, EventEmitter, OnInit, Output } from '@angular/core';
 import { ExercisesService } from '../exercises.service';
 import { Exercise } from '../exercise';
 
@@ -16,7 +16,7 @@ export class SearchBarComponent implements OnInit {
   exercises: Exercise[] = [];
   constructor(private service: ExercisesService) { }
 
-  @Output() clickedResult = new EventEmitter<Exercise>
+  @Output() clickedResult = new EventEmitter<Exercise>;
 
   ngOnInit() {
     this.fetchData("");

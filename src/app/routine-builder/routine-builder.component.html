@@ -1,9 +1,8 @@
-<div class="asd">
-    <app-routine-table class="routine-table"></app-routine-table>
-    <app-routine-table class="routine-table"></app-routine-table>
-    <app-routine-table class="routine-table"></app-routine-table>
-    <app-routine-table class="routine-table"></app-routine-table>
-    <app-routine-table class="routine-table"></app-routine-table>
-    <app-routine-table class="routine-table"></app-routine-table>
-    <app-routine-table class="routine-table"></app-routine-table>
+<div class="tables-container">
+    <div *ngFor="let weekDay of weekDays">
+        <app-routine-table (currentExercises)="updateExercisesByDay($event)" #routineTables [day]="weekDay" class="routine-table"></app-routine-table>
+    </div>
+</div>
+<div class="export-pdf-btn-container">
+    <button class="export-pdf-btn" (click)="exportPdf()">Export PDF</button>
 </div>

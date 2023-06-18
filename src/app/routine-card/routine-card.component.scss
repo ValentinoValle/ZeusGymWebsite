@@ -1,0 +1,28 @@
+.routine-card-wrapper {
+    padding: 1.5em;
+    background-color: var(--primary-dark);
+    color: var(--primary-white);
+    border-radius: .5em;
+    box-shadow: 0 0 1em var(--primary-dark);
+
+    & > * + * {
+        margin-top: .5rem;
+    }
+}
+
+.attribution {
+    font-size: .75rem;
+    opacity: .75;
+}
+
+.routine-name {
+    font-size: 1.5rem;
+}
+
+.routine-image {
+    border-radius: .5em .5em 0 0;
+}
+
+.see-more-btn {
+    display: flex;
+}   

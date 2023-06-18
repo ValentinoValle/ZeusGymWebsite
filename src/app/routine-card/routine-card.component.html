@@ -1,0 +1,13 @@
+<div class="routine-card-wrapper">
+    <div>
+        <img class="routine-image" [src]="imgSource" alt="routine-image">
+        <div class="attribution">
+            Photo by <a [href]="attributionLink">{{ attributionName }}</a> on <a [href]="attributionSiteLink">{{ attributionSite }}</a>
+        </div>
+    </div>
+    <h4 class="routine-name">{{ routineName }}</h4>
+    <p>{{ description }}</p>
+    <div class="see-more-btn">
+        <app-get-started-btn [path]="buttonLink" btnText="See More"></app-get-started-btn>
+    </div>
+</div>

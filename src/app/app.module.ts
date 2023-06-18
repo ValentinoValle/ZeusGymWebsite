@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,9 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchFilterPipe } from './search-filter.pipe';
 import { RoutineTableComponent } from './routine-table/routine-table.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { PremadeRoutinesComponent } from './premade-routines/premade-routines.component';
+import { RoutineCardComponent } from './routine-card/routine-card.component';
+import { PremadeRoutineInfoComponent } from './premade-routine-info/premade-routine-info.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     RoutineBuilderComponent,
     SearchBarComponent,
     SearchFilterPipe,
-    RoutineTableComponent
+    RoutineTableComponent,
+    PremadeRoutinesComponent,
+    RoutineCardComponent,
+    PremadeRoutineInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

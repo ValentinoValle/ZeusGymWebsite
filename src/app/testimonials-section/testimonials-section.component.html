@@ -1,5 +1,17 @@
-<div class="testimonials-wrapper">
-    <app-testimonial></app-testimonial>
-    <app-testimonial></app-testimonial>
-    <app-testimonial></app-testimonial>
+
+
+<div class="carousel-wrapper">
+    <owl-carousel-o class="carousel" [options]="customOptions">
+        <ng-container *ngFor="let testimonial of testimonialsArr">
+            <ng-template carouselSlide>
+                <app-testimonial class="carousel-cell"
+                    [imgSource]="testimonial.source"
+                    [name]="testimonial.name"
+                    [profession]="testimonial.profession"
+                    [quote]="testimonial.quote">
+                </app-testimonial>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
 </div>
+

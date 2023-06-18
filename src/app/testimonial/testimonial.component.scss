@@ -63,7 +63,7 @@
     object-fit: cover;
     object-position: 50% 50%;
     height: 100px;
-    width: 100px;
+    width: 100px !important;
     border-radius: 50%;
     box-shadow: 0 0 1em var(--primary-white);
 }
@@ -84,6 +84,6 @@
 
 /* Testimonial text */
 
-.testimonial-text {
+.quote {
     width: 60%;
 }

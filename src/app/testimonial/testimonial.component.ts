@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-testimonial',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class TestimonialComponent {
 
+  @Input() imgSource: string;
+  @Input() name: string;
+  @Input() profession: string;
+  @Input() quote: string;
 }

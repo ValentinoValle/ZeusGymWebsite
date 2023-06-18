@@ -1,0 +1,18 @@
+<div class="routines-wrapper">
+    <div class="routine" *ngFor="let routine of routines">
+        <app-routine-card
+        [imgSource]="routine.imgSource"
+        [attributionName]="routine.attributionName"
+        [attributionLink]="routine.attributionLink"
+        [attributionSite]="routine.attributionSite"
+        [attributionSiteLink]="routine.attributionSiteLink"
+        [routineName]="routine.name"
+        [description]="routine.description"
+        [buttonLink]="routine.btnPath"></app-routine-card>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<div class="create-your-own-wrapper">
+    <p class="create-your-own-text">None fit your needs?</p>
+    <app-get-started-btn path="../routineBuilder" btnText="Create your own" ></app-get-started-btn>
+</div>

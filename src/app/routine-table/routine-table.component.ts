@@ -1,7 +1,7 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, Input, EventEmitter, Output } from '@angular/core';
 import { Exercise } from '../exercise';
-import { MatDialog } from '@angular/material/dialog'
-import { SearchBarComponent } from '../search-bar/search-bar.component';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 @Component({
   selector: 'app-routine-table',
@@ -10,16 +10,25 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
 })
 export class RoutineTableComponent {
 
-  constructor(public dialog: MatDialog) {}
+  constructor() {}
+
+  @Input() day: string;
+
+  @Output() currentExercises = new EventEmitter<any[]>
 
   @ViewChild('dayTable') dayTable: ElementRef;
   exercises: Exercise[] = [];
 
   addNewExercise(newExercise: Exercise) {
    this.exercises.push(newExercise);
+   this.emitCurrentExercises();
   }
 
   deleteExercise(i: number) {
     this.exercises.splice(i, 1)
+  }
+
+  emitCurrentExercises() {
+    this.currentExercises.emit([this.exercises, this.day])
   }
 }

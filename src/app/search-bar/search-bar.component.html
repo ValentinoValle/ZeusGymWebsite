@@ -1,11 +1,16 @@
 
 
 <div class="searchbar">
-    <input class="searchbar-input" type="search" (focus)="onFocus()" (blur)="onBlur()" [(ngModel)]="enteredSearchValue">
+    <input placeholder="Add an exercise" class="searchbar-input" type="search" (focus)="onFocus()" (blur)="onBlur()" [(ngModel)]="enteredSearchValue">
     <ul class="search-results" *ngIf="isOnFocus">
-        <div (mousedown)="emitExerciseData(exercise)" *ngFor="let exercise of exercises | searchFilter: enteredSearchValue">
+        <div (mousedown)="emitExerciseData(exercise)" *ngFor="let exercise of exercises | searchFilter: enteredSearchValue; let i = index">
             <li class="result">
-                <span>{{ exercise.name }}<br> type: {{ exercise.category }}, muscle: {{ exercise.primaryMuscles }}</span>
+                <p>
+                    <span class="exercise-name">{{ exercise.name }}</span>
+                    <br> 
+                    <span class="exercise-type">type:</span> {{ exercise.category }}, 
+                    <span class="exercise-muscle">muscle:</span> {{ exercise.primaryMuscles }}
+                </p>
             </li>
         </div>
     </ul>

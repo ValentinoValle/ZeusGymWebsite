@@ -1,35 +1,48 @@
 
+.searchbar {
+    padding-top: 1em;
+}
+
 .searchbar-input {
     position: relative;
-    width: 100%;
-    padding: .5em;
-    margin: 0 auto;
+    width: 80%;
+    padding: .5em 1.5em;
+    border-radius: 1.5em;
+    border: none;
 }
 
 .search-results {   
-    
     position: absolute;
     overflow-y: scroll;
     z-index: 10000;
-    /*
-    left: 33%;
-    right: 33%;
-    */
-    margin: 0 auto;
-    width: 30%;
-    
-    /*
-    position: absolute;
-    overflow-y: scroll;
-    */
+    margin: 1em auto;
+    width: 18.5%;
     max-height: 50vh;
     list-style: none;
     background-color: var(--primary-white);
-    box-shadow: 0 .5em .5em var(--primary-dark);
+    box-shadow: 0 0 .5em var(--primary-dark);
     padding: 0;
+    border-radius: .75em;
 }
 
 .result {
-   padding: .5em;
+   padding: .5em .5em .5em 1em;
    border-bottom: 1px solid var(--primary-dark);
+
+   &:hover, &:focus {
+        background-color: #e0cbff;
+   }
+}
+
+.exercise-name {
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.exercise-type {
+    font-weight: 500;
+}
+
+.exercise-muscle {
+    font-weight: 500;
 }

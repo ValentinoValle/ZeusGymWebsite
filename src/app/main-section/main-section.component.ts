@@ -8,24 +8,3 @@ import { Component } from '@angular/core';
 export class MainSectionComponent {
 
 }
-
-const options = {
-  threshold: 0.5
-};
-
-const sections = document.querySelectorAll(".main-section");
-
-const sectionObserver = new IntersectionObserver(function(entries, sectionObserver) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add("appear");
-      sectionObserver.unobserve(entry.target);
-    }
-  });
-}, options);
-
-sections.forEach(section => {
-  sectionObserver.observe(section);
-});
