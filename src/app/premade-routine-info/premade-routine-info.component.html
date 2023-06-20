@@ -1,2 +1,65 @@
-<p>hola</p>
-<p>{{ routine.name }}</p>
+<div class="table-wrapper">
+    <table class="table">
+        <caption class="routine-name">
+            {{ routine.name }}
+            <a class="close-table" routerLink="../../">
+                <!--<?xml version="1.0" encoding="utf-8"?> Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg fill="#ffffff" width="24px" height="24px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5  c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4  C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z"/>
+                </svg> 
+            </a>
+        </caption>
+        <thead class="theading">
+            <tr>
+                <th class="head-cell" *ngFor="let day of days">{{ day }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-cell="monday" class="cell">{{ routine.monday[0] }}</td>
+                <td data-cell="tuesday"class="cell">{{ routine.tuesday[0] }}</td>
+                <td data-cell="wednesday" class="cell">{{ routine.wednesday[0] }}</td>
+                <td data-cell="thursday" class="cell">{{ routine.thursday[0] }}</td>
+                <td data-cell="friday" class="cell">{{ routine.friday[0] }}</td>
+                <td data-cell="saturday" class="cell">{{ routine.saturday[0] }}</td>
+                <td data-cell="sunday" class="cell">{{ routine.sunday[0] }}</td>
+            </tr>
+            <tr>
+                <td data-cell="monday" class="cell">{{ routine.monday[1] }}</td>
+                <td data-cell="tuesday" class="cell">{{ routine.tuesday[1] }}</td>
+                <td data-cell="wednesday" class="cell">{{ routine.wednesday[1] }}</td>
+                <td data-cell="thursday" class="cell">{{ routine.thursday[1] }}</td>
+                <td data-cell="friday" class="cell">{{ routine.friday[1] }}</td>
+                <td data-cell="saturday" class="cell">{{ routine.saturday[1] }}</td>
+                <td data-cell="sunday" class="cell">{{ routine.sunday[1] }}</td>
+            </tr>
+            <tr>
+                <td data-cell="monday" class="cell">{{ routine.monday[2] }}</td>
+                <td data-cell="tuesday" class="cell">{{ routine.tuesday[2] }}</td>
+                <td data-cell="wednesday" class="cell">{{ routine.wednesday[2] }}</td>
+                <td data-cell="thursday" class="cell">{{ routine.thursday[2] }}</td>
+                <td data-cell="friday" class="cell">{{ routine.friday[2] }}</td>
+                <td data-cell="saturday" class="cell">{{ routine.saturday[2] }}</td>
+                <td data-cell="sunday" class="cell">{{ routine.sunday[2] }}</td>
+            </tr>
+            <tr>
+                <td data-cell="monday" class="cell">{{ routine.monday[3] }}</td>
+                <td data-cell="tuesday" class="cell">{{ routine.tuesday[3] }}</td>
+                <td data-cell="wednesday" class="cell">{{ routine.wednesday[3] }}</td>
+                <td data-cell="thursday" class="cell">{{ routine.thursday[3] }}</td>
+                <td data-cell="friday" class="cell">{{ routine.friday[3] }}</td>
+                <td data-cell="saturday" class="cell">{{ routine.saturday[3] }}</td>
+                <td data-cell="sunday" class="cell">{{ routine.sunday[3] }}</td>
+            </tr>
+            <tr>
+                <td data-cell="monday" class="cell">{{ routine.monday[4] }}</td>
+                <td data-cell="tuesday" class="cell">{{ routine.tuesday[4] }}</td>
+                <td data-cell="wednesday" class="cell">{{ routine.wednesday[4] }}</td>
+                <td data-cell="thursday" class="cell">{{ routine.thursday[4] }}</td>
+                <td data-cell="friday" class="cell">{{ routine.friday[4] }}</td>
+                <td data-cell="saturday" class="cell">{{ routine.saturday[4] }}</td>
+                <td data-cell="sunday" class="cell">{{ routine.sunday[4] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

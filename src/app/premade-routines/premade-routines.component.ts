@@ -17,7 +17,7 @@ export class PremadeRoutinesComponent {
       attributionSite: "Unsplash",
       attributionSiteLink: "https://unsplash.com/photos/AkEr0jc5Lvs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", 
       name: "Push, Pull, Legs",
-      description: "The push, pull, legs routine consists of splitting workouts according to the primary function of the muscles, working upper body pushing, upper body pulling and leg muscles on different days. with this split you have the option of training three or six days a week.",
+      description: "The push, pull, legs routine consists of splitting workouts according to the primary function of the muscles, working upper body pushing, pulling and leg muscles on different days. with this split you have the option of training three or six days a week.",
       btnPath: "premadeRoutineInfo/ppl",
     },
     {

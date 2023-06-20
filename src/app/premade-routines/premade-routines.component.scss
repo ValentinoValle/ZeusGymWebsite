@@ -21,3 +21,16 @@
     font-size: 1.125rem;
     color: var(--primary-dark);
 }
+
+@media (max-width: 1100px)  {
+    .routines-wrapper {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .routine {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
