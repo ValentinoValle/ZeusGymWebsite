@@ -37,4 +37,10 @@
     .routine-image {
         border-radius: .5em 0 0 .5em;
     }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }

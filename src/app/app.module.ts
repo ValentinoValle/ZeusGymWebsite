@@ -21,6 +21,8 @@ import { RoutineTableComponent } from './routine-table/routine-table.component';
 import { PremadeRoutinesComponent } from './premade-routines/premade-routines.component';
 import { RoutineCardComponent } from './routine-card/routine-card.component';
 import { PremadeRoutineInfoComponent } from './premade-routine-info/premade-routine-info.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { PremadeRoutineInfoComponent } from './premade-routine-info/premade-rout
     RoutineTableComponent,
     PremadeRoutinesComponent,
     RoutineCardComponent,
-    PremadeRoutineInfoComponent
+    PremadeRoutineInfoComponent,
+    AboutUsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
