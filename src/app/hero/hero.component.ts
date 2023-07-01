@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -6,5 +6,14 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
+
+  constructor(private renderer: Renderer2) { }
+
   encapsulation: ViewEncapsulation.None
+
+  isOnView(hasIntersection: boolean, el: HTMLElement) {
+    if (hasIntersection) {
+      this.renderer.removeClass(el, 'hide')
+    };
+  }
 }

@@ -1,12 +1,13 @@
 .about-us-wrapper {
     display: flex;
     width: 60%;
-    height: 65%;
-    margin: 0 auto;
+    padding-block: 10em;
+    margin: 1em auto;
     align-items: center;
     gap: 2em;
     color: var(--primary-dark);
     position: relative;
+    transition: transform .4s, opacity .6s ease-in;
 
     &::before {
         content: "";
@@ -44,11 +45,16 @@
 }
 
 .logo {
-    width: 30%;
+    width: 20%;
 }
 
 .btn {
     display: flex;
+}
+
+.hide {
+    opacity: 0;
+    transform: translateX(-10%);
 }
 
 @media (max-width: 1300px) {
@@ -60,6 +66,7 @@
 @media (max-width: 800px) {
     .about-us-wrapper {
         flex-direction: column;
+        padding-block: 3em;
 
         &::before, &::after {
             display: none;
@@ -76,6 +83,12 @@
     }
 }
 
+@media (max-width: 800px) {
+    .about-us-wrapper {
+        justify-content: center;
+    }
+}
+
 @media (max-height: 700px) {
     .about-us-wrapper::before, .about-us-wrapper::after {
         display: none;
@@ -89,7 +102,6 @@
 
     .about-us-info {
         text-align: left;
-        //gap: 1em;
     }
 
     .btn {
@@ -97,3 +109,13 @@
     }
 }
 
+@media (prefers-reduced-motion) {
+    .about-us-wrapper {
+        transition: none;
+
+        &::before, &::after {
+            width: 100%;
+            transition: none;
+        }
+    }
+}

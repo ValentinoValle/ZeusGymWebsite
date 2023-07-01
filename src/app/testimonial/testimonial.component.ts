@@ -11,4 +11,5 @@ export class TestimonialComponent {
   @Input() name: string;
   @Input() profession: string;
   @Input() quote: string;
+  @Input() attribution: string; 
 }

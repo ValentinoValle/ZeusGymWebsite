@@ -1,4 +1,4 @@
-import { Component, ViewChildren, ElementRef, QueryList } from '@angular/core';
+import { Component, ViewChildren, ElementRef, QueryList, Renderer2 } from '@angular/core';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import { Exercise } from '../exercise';
@@ -9,7 +9,8 @@ import { Exercise } from '../exercise';
   styleUrls: ['./routine-builder.component.scss']
 })
 export class RoutineBuilderComponent {
-  constructor() { }
+  
+  constructor(private renderer: Renderer2) { }
   
   @ViewChildren('routineTables') dayTable: QueryList<ElementRef>;
 
@@ -47,5 +48,11 @@ export class RoutineBuilderComponent {
       })
     })
     doc.output('dataurlnewwindow')
+  }
+
+  isOnView(hasIntersection: boolean, el: HTMLElement) {
+    if (hasIntersection) {
+      this.renderer.removeClass(el, 'hide')
+    };
   }
 }

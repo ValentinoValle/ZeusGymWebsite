@@ -19,6 +19,7 @@
 
 .contact-icons, .social-media-icons {
     display: flex;
+    flex-wrap: wrap;
     gap: 1em;
 }
 
@@ -40,6 +41,25 @@ svg {
     cursor: pointer;
 }
 
+.hide {
+    opacity: 0;
+    transform: translateX(-10%);
+}
+
+.container {
+    transition: transform .4s, opacity .6s ease-in;
+
+    &:nth-child(2) {
+        transition-delay: .1s;
+    }
+
+    &:nth-child(3) {
+        transition-delay: .2s;
+    }
+}
+
+
+
 @media (max-width: 900px) {
     .contact-wrapper {
         flex-direction: column;
@@ -47,5 +67,15 @@ svg {
 
     .map {
         width: 90%;
+    }
+
+    .container:nth-child(2), .container:nth-child(3) {
+        transition-delay: 0s;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .container {
+        transition: none;
     }
 }

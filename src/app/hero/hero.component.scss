@@ -3,6 +3,7 @@
 .hero {
     background: url("../../assets/pexels-leon-ardho-1552252.jpg");
     background-size: cover;
+    background-color: var(--primary-dark);
     padding: 1em;
     color: var(--primary-white);
     min-height: 100vh;
@@ -39,7 +40,8 @@
     filter: drop-shadow(5px 5px 0 black);
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, #fff, #393939)
+    background-image: linear-gradient(to right, #fff, #393939);
+    transition: transform .4s, opacity .6s ease-in;
 }
 
 .header-leyend {
@@ -49,6 +51,7 @@
     letter-spacing: .25rem;
     line-height: 2;
     text-transform: uppercase;
+    transition: transform .4s, opacity .6s ease-in;
 
     &::before, &::after {
         content: "";
@@ -62,6 +65,12 @@
 .hero-btn {
     margin-top: 5%;
     font-size: 2.5rem;
+    transition: transform .4s, opacity .6s ease-in;
+}
+
+.hide {
+    opacity: 0;
+    transform: translateY(100%);
 }
 
 @media (max-width: 700px) {
@@ -111,5 +120,28 @@
 @media (max-height: 500px) and (max-width: 850px) {
     .primary-header {
         font-size: 3rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .hero-btn {
+        font-size: 1.5rem;
+    }
+
+    .hero-text-wrapper {
+        & > * {
+            margin: 1rem;
+            text-wrap: balance;
+        }
+    }
+
+    .hero-wrapper {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .primary-header, .header-leyend, .hero-btn {
+        transition: none;
     }
 }

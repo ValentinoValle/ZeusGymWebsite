@@ -1,9 +1,25 @@
 .carousel-wrapper {
     padding-top: 1em;
+
+    transition: transform .4s, opacity .6s ease-in;
 }
 
 .carousel-cell {
     padding: 1em;
 }
 
+.hide {
+    opacity: 0;
+    transform: translateY(10%);
+}
 
+.note {
+    padding: .3em .3em .3em 1em;
+    color: hsl(0 0% 45%);
+}
+
+@media (prefers-reduced-motion) {
+    .carousel-wrapper {
+        transition: none;
+    }
+}

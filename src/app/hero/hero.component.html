@@ -1,12 +1,33 @@
 <header class="hero">
     <div class="hero-wrapper">
-        <app-navbar></app-navbar>
+        <div>
+            <app-navbar></app-navbar>
+        </div>
         <div class="hero-info">
             <div class="hero-text-wrapper">
-                <h1 class="primary-header">Zeus Gym</h1>
-                <p class="header-leyend">Get fitter, Get stronger, Get healthier</p>
+                <h1 
+                #primaryHeader
+                appObserveElement 
+                (intersection)="isOnView($event, primaryHeader)" 
+                [threshold]="0" 
+                class="primary-header hide">
+                    Zeus Gym
+                </h1>
+                <p 
+                #headerLeyend
+                appObserveElement 
+                (intersection)="isOnView($event, headerLeyend)" 
+                [threshold]="0" 
+                class="header-leyend hide">
+                    Get fitter, Get stronger, Get healthier
+                </p>
             </div>
-            <div class="hero-btn">
+            <div 
+            #getStartedBtn
+            appObserveElement 
+            (intersection)="isOnView($event, getStartedBtn)" 
+            [threshold]="0" 
+            class="hero-btn hide">
                 <app-get-started-btn path="premadeRoutines" btnText="Get Started"></app-get-started-btn>
             </div>
         </div>

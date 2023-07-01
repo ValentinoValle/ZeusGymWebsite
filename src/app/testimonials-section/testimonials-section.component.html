@@ -1,6 +1,6 @@
 
 
-<div class="carousel-wrapper">
+<div #carouselWrapper appObserveElement (intersection)="isOnView($event, carouselWrapper)" [threshold]="0" class="carousel-wrapper hide">
     <owl-carousel-o class="carousel" [options]="customOptions">
         <ng-container *ngFor="let testimonial of testimonialsArr">
             <ng-template carouselSlide>
@@ -8,10 +8,12 @@
                     [imgSource]="testimonial.source"
                     [name]="testimonial.name"
                     [profession]="testimonial.profession"
-                    [quote]="testimonial.quote">
+                    [quote]="testimonial.quote"
+                    [attribution]="testimonial.attribution">
                 </app-testimonial>
             </ng-template>
         </ng-container>
     </owl-carousel-o>
+    <p class="note">All testimonials and names are not real, they are for review purpouses only</p>
 </div>
 

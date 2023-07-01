@@ -6,7 +6,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="exercise" *ngFor="let exercise of exercises; let i = index">
+            <tr class="exercise" *ngFor="let exercise of exercises; let i = index" @enterLeave>
                 <div class="exercise-container" #result>
                     <p class="exercise-info">
                         <span class="exercise-name">{{ exercise.name }}</span>

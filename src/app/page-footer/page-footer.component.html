@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="footer-wrapper">
-        <nav class="footer-nav">
+        <nav #footerNav appObserveElement (intersection)="isOnView($event, footerNav)" [threshold]="1" class="footer-nav hide">
             <ul class="footer-nav-list">
                 <li><a routerLink="">Home</a></li>
                 <li><a routerLink="premadeRoutines">Routines</a></li>
@@ -8,7 +8,7 @@
                 <li><a routerLink="contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="icon-wrapper">
+        <div #iconWrapper appObserveElement (intersection)="isOnView($event, iconWrapper)" [threshold]="1" class="icon-wrapper hide">
             <img class="logo" src="../assets/icons/icons8-gym-100.png" alt="logo">
             <div class="social-media-icons">
                 <!--<?xml version="1.0" encoding="utf-8"?> Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -73,7 +73,7 @@
             </div>
         </div>
         
-        <div class="contact-info">
+        <div #contactInfo appObserveElement (intersection)="isOnView($event, contactInfo)" [threshold]="1" class="contact-info hide">
             <p>Customer support: xxx-xxxx-xxxx</p>
             <p>Location: xxxx, xxxx-xxxx</p>
             <div class="btn">

@@ -26,3 +26,36 @@
         transition: all .2s;
     }
 }
+
+.table-wrapper {
+    transition: transform .4s, opacity .6s ease-in;
+}
+
+.table-wrapper:nth-child(2),
+.table-wrapper:nth-child(4),
+.table-wrapper:nth-child(6) {
+    transition-delay: .1s;
+}
+
+.hide {
+    opacity: 0;
+    transform: translateX(-10%);
+}
+
+@media (max-width: 900px) {
+    .tables-container {
+        grid-template-columns: 1fr;
+    }
+
+    .table-wrapper:nth-child(2),
+    .table-wrapper:nth-child(4),
+    .table-wrapper:nth-child(6) {
+    transition-delay: 0s;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .table-wrapper {
+        transition: none;
+    }
+}

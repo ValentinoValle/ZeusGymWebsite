@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { fader } from '../animations/route-animations';
+
 
 @Component({
   selector: 'app-premade-routines',
   templateUrl: './premade-routines.component.html',
-  styleUrls: ['./premade-routines.component.scss']
+  styleUrls: ['./premade-routines.component.scss'],
+  animations: [fader]
 })
 export class PremadeRoutinesComponent {
   
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   routines = [
     {
@@ -41,4 +44,10 @@ export class PremadeRoutinesComponent {
       btnPath: "premadeRoutineInfo/fullbody",
     }
   ] 
+
+  isOnView(hasIntersection: boolean, el: HTMLElement) {
+    if (hasIntersection) {
+      this.renderer.removeClass(el, 'hide')
+    };
+  }
 }

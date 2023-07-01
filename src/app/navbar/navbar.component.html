@@ -1,7 +1,11 @@
 
-<div class="nav-wrapper">
-    <a routerLink=""><img class="logo" src="../../assets/icons/icons8-gym-100.png" alt="logo"></a>
-    <nav class="nav" #nav>
+<div 
+#navWrapper
+class="nav-wrapper hide"
+appObserveElement
+(intersection)="isOnView($event, navWrapper)">
+    <a (click)="scrollToTop()" routerLink=""><img class="logo" src="../../assets/icons/icons8-gym-100.png" alt="logo"></a>
+    <nav class="nav" [attr.data-visible]="navIsShowing" #nav>
         <ul class="nav-list">
             <li>
                 <a class="nav-link" routerLink="" ><span>Home</span></a>

@@ -1,12 +1,23 @@
 import { Component, ViewChild, ElementRef, Input, EventEmitter, Output } from '@angular/core';
 import { Exercise } from '../exercise';
-import jsPDF from 'jspdf';
-import autoTable from 'jspdf-autotable';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-routine-table',
   templateUrl: './routine-table.component.html',
-  styleUrls: ['./routine-table.component.scss']
+  styleUrls: ['./routine-table.component.scss'],
+  animations: [
+    trigger('enterLeave', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate(200),
+      ]),
+      transition(':leave', [
+        style({ opacity: 1 }),
+        animate(200, style({ opacity: 0, transform: 'translateX(-100%)' })),
+      ]),
+    ]),
+  ],
 })
 export class RoutineTableComponent {
 

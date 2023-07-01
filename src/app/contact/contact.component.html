@@ -1,6 +1,6 @@
 <div class="contact-wrapper">
     <div class="contact-info">
-        <div>
+        <div #divOne appObserveElement (intersection)="isOnView($event, divOne)" [threshold]=".5" class="container hide">
             <h3 class="contact-header">Customer Support:</h3>
             <div class="contact-icons">
                 <!--<?xml version="1.0" encoding="utf-8"?> Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -15,7 +15,7 @@
                 <p class="phone-number">xxx-xxxx-xxxx</p>
             </div>
         </div>
-        <div>
+        <div #divTwo appObserveElement (intersection)="isOnView($event, divTwo)" [threshold]=".5" class="container hide">
             <h3 class="contact-header">Social Media:</h3>
             <div class="social-media-icons">
                 <!--<?xml version="1.0" encoding="utf-8"?> Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -71,7 +71,7 @@
                 </svg>
             </div>
         </div>
-        <div>
+        <div #divThree appObserveElement (intersection)="isOnView($event, divThree)" [threshold]=".5" class="container hide">
             <h3 class="contact-header">Location:</h3>
             <p class="location">xxxx, xxxx-xxxx</p>
         </div>

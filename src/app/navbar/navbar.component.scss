@@ -5,9 +5,12 @@
     position: fixed;
     inset: 3% 0 85% 5%;
     z-index: 10;
+    height: 102px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    transition: transform .4s, opacity .6s ease-in;
 }
 
 /* Hamburger nav button */
@@ -111,6 +114,15 @@
     }
 }
 
+.hide {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.nav[data-visible="true"] {
+    transform: translateX(0);
+}
+
 /* Media */
 
 @media (max-width: 900px) {
@@ -165,3 +177,11 @@
         inset: 0 0 0 50%;
     }
 }
+
+@media (prefers-reduced-motion) {
+    .nav-wrapper {
+        transition: none;
+    }
+}
+
+

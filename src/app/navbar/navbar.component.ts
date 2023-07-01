@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,27 +6,32 @@ import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-
-  @ViewChild('nav') nav: ElementRef;
   
   navIsShowing: boolean = false;
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    if (event.target.innerWidth >= 900 || this.navIsShowing) {
-      this.nav.nativeElement.style.transform = 'translateX(0)';
-    } else if (!this.navIsShowing) {
-      this.nav.nativeElement.style.transform = 'translateX(100%)';
-    }
-  }
+  constructor(private renderer: Renderer2) { }
 
   showNav() {
     if (!this.navIsShowing) {
-      this.nav.nativeElement.style.transform = 'translateX(0)';
       this.navIsShowing = true;
     } else {
-      this.nav.nativeElement.style.transform = 'translateX(100%)';
       this.navIsShowing = false;
     }
+  }
+
+  scrollToTop() {
+    (function smoothscroll() {
+        var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentScroll > 0) {
+            window.requestAnimationFrame(smoothscroll);
+            window.scrollTo(0, currentScroll - (currentScroll / 8));
+        }
+    })();
+}
+
+  isOnView(hasIntersection: boolean, el: HTMLElement) {
+    if (hasIntersection) {
+      this.renderer.removeClass(el, 'hide')
+    };
   }
 }

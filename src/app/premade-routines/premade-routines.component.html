@@ -1,5 +1,11 @@
 <div class="routines-wrapper">
-    <div class="routine" *ngFor="let routine of routines">
+    <div 
+    #routineCard
+    appObserveElement
+    (intersection)="isOnView($event, routineCard)"
+    [threshold]=".2"
+    class="routine hide" 
+    *ngFor="let routine of routines">
         <app-routine-card
         [imgSource]="routine.imgSource"
         [attributionName]="routine.attributionName"
@@ -11,8 +17,14 @@
         [buttonLink]="routine.btnPath"></app-routine-card>
     </div>
 </div>
-<router-outlet></router-outlet>
+<div [@routeAnimations]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+</div>
 <div class="create-your-own-wrapper">
-    <p class="create-your-own-text">None fit your needs?</p>
-    <app-get-started-btn path="../routineBuilder" btnText="Create your own" ></app-get-started-btn>
+    <p 
+    #text
+    appObserveElement
+    (intersection)="isOnView($event, text)"
+    [threshold]=".7" class="create-your-own-text hide">None fit your needs?</p>
+    <app-get-started-btn path="../routineBuilder" btnText="Create your own"></app-get-started-btn>
 </div>

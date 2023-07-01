@@ -1,5 +1,11 @@
 <div class="tables-container">
-    <div *ngFor="let weekDay of weekDays">
+    <div
+    #routineTable
+    appObserveElement
+    (intersection)="isOnView($event, routineTable)"
+    [threshold]=".3"
+    class="table-wrapper hide"
+    *ngFor="let weekDay of weekDays">
         <app-routine-table (currentExercises)="updateExercisesByDay($event)" #routineTables [day]="weekDay" class="routine-table"></app-routine-table>
     </div>
 </div>
