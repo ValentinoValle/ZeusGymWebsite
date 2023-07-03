@@ -14,7 +14,7 @@ export class PremadeRoutinesComponent {
 
   routines = [
     {
-      imgSource: "../../assets/routineImages/alora-griffiths-AkEr0jc5Lvs-unsplash.jpg",
+      imgSource: "./assets/routineImages/alora-griffiths-AkEr0jc5Lvs-unsplash.jpg",
       attributionName: "Alora Griffiths",
       attributionLink: "https://unsplash.com/@aloragriffiths?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
       attributionSite: "Unsplash",
@@ -24,7 +24,7 @@ export class PremadeRoutinesComponent {
       btnPath: "premadeRoutineInfo/ppl",
     },
     {
-      imgSource: "../../assets/routineImages/richard-r--jdfUP2N7Os-unsplash.jpg",
+      imgSource: "./assets/routineImages/richard-r--jdfUP2N7Os-unsplash.jpg",
       attributionName: "Richard R",
       attributionLink: "https://unsplash.com/@sepro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
       attributionSite: "Unsplash",
@@ -34,7 +34,7 @@ export class PremadeRoutinesComponent {
       btnPath: "premadeRoutineInfo/upperlower",
     },
     {
-      imgSource: "../../assets/routineImages/karsten-winegeart-0Wra5YYVQJE-unsplash.jpg",
+      imgSource: "./assets/routineImages/karsten-winegeart-0Wra5YYVQJE-unsplash.jpg",
       attributionName: "Karsten Winegeart",
       attributionLink: "https://unsplash.com/ko/@karsten116?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
       attributionSite: "Unsplash",
