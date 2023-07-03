@@ -178,6 +178,14 @@
     }
 }
 
+@media (max-width: 900px) and (orientation: landscape) {
+    .nav-list {
+        height: 100%;
+        margin: 0;
+        justify-content: center;
+    }
+}
+
 @media (prefers-reduced-motion) {
     .nav-wrapper {
         transition: none;
