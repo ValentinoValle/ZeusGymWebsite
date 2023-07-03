@@ -1,6 +1,6 @@
 import { Component, QueryList, ElementRef, ViewChildren, EventEmitter, OnInit, Output } from '@angular/core';
-import { ExercisesService } from '../exercises.service';
-import { Exercise } from '../exercise';
+import { ExercisesService } from '../../services/exercises/exercises.service';
+import { Exercise } from '../../interfaces/exercise';
 
 @Component({
   selector: 'app-search-bar',

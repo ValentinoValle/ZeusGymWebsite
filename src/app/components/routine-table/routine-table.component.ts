@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef, Input, EventEmitter, Output } from '@angular/core';
-import { Exercise } from '../exercise';
+import { Exercise } from '../../interfaces/exercise';
 import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({

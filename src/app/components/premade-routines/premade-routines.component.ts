@@ -1,5 +1,5 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
-import { fader } from '../animations/route-animations';
+import { fader } from '../../animations/route-animations';
 
 
 @Component({

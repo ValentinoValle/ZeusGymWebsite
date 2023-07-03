@@ -7,23 +7,23 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HeroComponent } from './hero/hero.component';
-import { MainSectionComponent } from './main-section/main-section.component';
-import { PageFooterComponent } from './page-footer/page-footer.component';
-import { TestimonialComponent } from './testimonial/testimonial.component';
-import { TestimonialsSectionComponent } from './testimonials-section/testimonials-section.component';
-import { GetStartedBtnComponent } from './get-started-btn/get-started-btn.component';
-import { RoutineBuilderComponent } from './routine-builder/routine-builder.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-import { RoutineTableComponent } from './routine-table/routine-table.component';
-import { PremadeRoutinesComponent } from './premade-routines/premade-routines.component';
-import { RoutineCardComponent } from './routine-card/routine-card.component';
-import { PremadeRoutineInfoComponent } from './premade-routine-info/premade-routine-info.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactComponent } from './contact/contact.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { MainSectionComponent } from './components/main-section/main-section.component';
+import { PageFooterComponent } from './components/page-footer/page-footer.component';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { TestimonialsSectionComponent } from './components/testimonials-section/testimonials-section.component';
+import { GetStartedBtnComponent } from './components/get-started-btn/get-started-btn.component';
+import { RoutineBuilderComponent } from './components/routine-builder/routine-builder.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { RoutineTableComponent } from './components/routine-table/routine-table.component';
+import { PremadeRoutinesComponent } from './components/premade-routines/premade-routines.component';
+import { RoutineCardComponent } from './components/routine-card/routine-card.component';
+import { PremadeRoutineInfoComponent } from './components/premade-routine-info/premade-routine-info.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactComponent } from './components/contact/contact.component';
 
-import { SearchFilterPipe } from './search-filter.pipe';
+import { SearchFilterPipe } from './pipes/searchFilter/search-filter.pipe';
 import { ObserveElementDirective } from './directives/observe-element.directive';
 
 @NgModule({

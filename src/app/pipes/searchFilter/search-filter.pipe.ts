@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Exercise } from './exercise';
+import { Exercise } from '../../interfaces/exercise';
 
 @Pipe({
   name: 'searchFilter'

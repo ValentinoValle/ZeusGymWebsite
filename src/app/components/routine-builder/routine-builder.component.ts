@@ -1,7 +1,7 @@
 import { Component, ViewChildren, ElementRef, QueryList, Renderer2 } from '@angular/core';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
-import { Exercise } from '../exercise';
+import { Exercise } from '../../interfaces/exercise';
 
 @Component({
   selector: 'app-routine-builder',

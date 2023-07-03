@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Exercise } from './exercise';
+import { Exercise } from '../../interfaces/exercise';
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs';
 

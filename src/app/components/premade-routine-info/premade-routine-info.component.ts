@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Routine } from '../routine';
+import { Routine } from '../../interfaces/routine';
 
 @Component({
   selector: 'app-premade-routine-info',
