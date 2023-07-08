@@ -10,9 +10,9 @@ export class SearchFilterPipe implements PipeTransform {
    
     let filteredExercises: Exercise [] = [];
     for (let exercise of exercises) {
-      if (exercise.name.toLowerCase().includes(filterText) ||
-      exercise.category.toLowerCase().includes(filterText) ||
-      exercise.primaryMuscles[0].toLowerCase().includes(filterText)) {
+      if (exercise.name.toLowerCase().includes(filterText.toLowerCase()) ||
+      exercise.category.toLowerCase().includes(filterText.toLowerCase()) ||
+      exercise.primaryMuscles[0].toLowerCase().includes(filterText.toLowerCase())) {
         filteredExercises.push(exercise);
       } 
     }
